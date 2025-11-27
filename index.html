@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- META etiquetas -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mi Portafolio 3D</title>
+
+    <!-- Vincular CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <header class="site-header">
+        <h1 class="logo">Mi Setup 3D</h1>
+
+        <nav class="main-nav">
+            <a href="#about">Sobre Mí</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+
+        <button id="toggle-theme" class="theme-btn">Modo Oscuro</button>
+    </header>
+
+    <main>
+
+        <section id="hero" class="hero">
+            <div id="viewer" class="viewer">
+                <div class="loading">Cargando...</div>
+            </div>
+
+            <p class="hero-text">
+                Bienvenido a mi portafolio. Este modelo 3D fue creado en Blender
+                e integrado a la web con Three.js como parte del curso de Graficación.
+            </p>
+        </section>
+
+        <section id="about" class="panel">
+            <h2>Sobre Mí</h2>
+
+            <div class="about-content">
+                <img src="assets/img/Foto.jpg" alt="Gadiel Sosa" class="avatar">
+
+                <p>
+                    Hola, soy <strong>Gadiel Sosa</strong>, estudiante del ITM en Ingeniería en Sistemas Computacionales.
+                    Me apasiona la programación, especialmente Flutter y el modelado 3D con Blender.
+                    Este portafolio integra ambas habilidades.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="panel">
+            <h2>Habilidades</h2>
+
+            <ul class="skill-list">
+                <li>Python & Java</li>
+                <li>Blender 3D</li>
+                <li>Flutter & Dart</li>
+                <li>PostgreSQL</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="panel">
+            <h2>Proyectos</h2>
+
+            <ul class="projects-list">
+                <li>Setup 3D modelado en Blender</li>
+                <li>Aplicaciones móviles con Flutter</li>
+                <li>Automatizaciones en Python</li>
+                <li>Administración de servidores Windows y Linux</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="panel">
+            <h2>Contacto</h2>
+
+            <p>
+                Correo:
+                <a href="mailto:LE23081226@merida.tecnm.mx" target="_blank">
+                    LE23081226@merida.tecnm.mx
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/Gadiel-Sosa" target="_blank">
+                    github.com/Gadiel-Sosa
+                </a>
+            </p>
+        </section>
+
+        <section id="contact-form" class="panel">
+            <h2>Envíame un mensaje</h2>
+
+            <form>
+                <label>Nombre:</label>
+                <input type="text" name="nombre" required>
+
+                <label>Correo:</label>
+                <input type="email" name="correo" required>
+
+                <label>Mensaje:</label>
+                <textarea name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Gadiel Sosa — Portafolio 3D</p>
+    </footer>
+
+    <button id="back-to-top">↑ Volver arriba</button>
+
+</body>
+</html>
