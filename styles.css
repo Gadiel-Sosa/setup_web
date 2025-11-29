@@ -110,6 +110,11 @@ body {
     color: #e94560
 }
 
+.panel h3 {
+    padding-top: 5%;
+    font: 1.8rem;
+    color: #e94560;
+}
 /* Sobre mi */
 .about-content {
     display: flex;
@@ -128,6 +133,7 @@ body {
 .about-content p {
     font-size: 1.05rem;
     color: #d8d8e5;
+    text-align: justify;
 }
 
 
