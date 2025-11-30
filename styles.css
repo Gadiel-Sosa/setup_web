@@ -31,7 +31,11 @@ body {
     top: 0;
     z-index: 1000;
 }
-
+.actions-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -114,6 +118,7 @@ body {
     padding-top: 5%;
     font: 1.8rem;
     color: #e94560;
+    
 }
 /* Sobre mi */
 .about-content {

@@ -23,8 +23,14 @@
             <a href="#projects">Proyectos</a>
             <a href="#contact">Contacto</a>
         </nav>
-
-        <button id="toggle-theme" class="theme-btn">Modo Oscuro</button>
+        <div class="actions-buttons">
+            <button onclick="document.getElementById('bg-music').muted = false;" class="theme-btn">
+                Activar música
+            </button>
+            <button onclick="document.getElementById('bg-music').muted = true;" class="theme-btn">
+                Desactivar música
+            </button>
+        </div>
     </header>
 
     <main>
@@ -38,6 +44,10 @@
                 Bienvenido a mi portafolio. Este modelo 3D fue creado en Blender
                 e integrado a la web con Three.js como parte del curso de Graficación.
             </p>
+            <button onclick="recenterCamera()" class="theme-btn">Recentrar vista</button>
+            
+
+
         </section>
 
         <section id="about" class="panel">
@@ -123,10 +133,35 @@
                 <li>Automatizaciones en Python</li>
                 <li>Administración de servidores Windows y Linux</li>
             </ul>
+            <h3>Setup 3D en Blender</h3>
+            <p>
+                Modelé un escritorio de programador desde cero usando Blender, incluyendo el escritorio, monitor,
+                computadora y accesorios. Durante este proyecto aprendí sobre modelado básico, extrusión, bevel
+                y exportación a GLB para integrarlo con Three.js en esta página.
+            </p>
+
+            <h3>Aplicaciones con Flutter</h3>
+            <p>
+                He desarrollado aplicaciones móviles con pantallas, navegación y animaciones con Rive. Flutter me
+                permite
+                expresar mis propias ideas tanto visualmente como en la funcionalidad. Me gusta experimentar con widgets
+                y funciones propias de Flutter.
+            </p>
+            <h3>Servidores Windows y Linux</h3>
+            <p>
+                He trabajado con la instalación y configuración de servidores Windows y Ubuntu para prácticas escolares,
+                entendiendo aspectos como usuarios, redes y servicios básicos. Esto me ha servido para poder ampliar mi
+                conocimiento en distintas áreas y no solo en programación.
+            </p>
         </section>
 
         <section id="contact" class="panel">
-            <h2>Contacto</h2>
+            <h2>¿Quieres hablar conmigo?</h2>
+
+            <p>
+                Si te interesa mi trabajo o quieres colaborar en algún proyecto, puedes escribirme. Me gusta aprender,
+                compartir ideas y trabajar en cosas nuevas que me ayuden a mejorar como desarrollador.
+            </p>
 
             <p>
                 Correo:
@@ -145,7 +180,11 @@
 
         <section id="contact-form" class="panel">
             <h2>Envíame un mensaje</h2>
-
+            <p>
+                Si deseas enviarme un mensaje directo, llena este formulario. Siempre estoy abierto a recibir
+                comentarios,
+                sugerencias o ideas de proyectos.
+            </p>
             <form>
                 <label>Nombre:</label>
                 <input type="text" name="nombre" required>
@@ -168,6 +207,26 @@
 
     <button id="back-to-top">↑ Volver arriba</button>
 
+
+
+    <audio id="bg-music" src="assets\audio\Imagine Dragons - Demons instrumental - Shadi004.mp3" loop autoplay
+        muted></audio>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/build/three.min.js"></script>
+
+<!-- Loaders clásicos (NO jsm) -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+
+<!-- Tu script -->
+<script src="script.js"></script>
+
+
+
 </body>
+
+
 
 </html>
