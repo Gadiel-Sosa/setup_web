@@ -1,79 +1,103 @@
-/* Configuraciones base */
+/* ****Configuraciones base**** */
+/* HOVER es cuando el cursor está encima de algo */
+
+/* 
+El selector universal (*) afecta a todos los elementos.
+Se usa para resetear márgenes y paddings por defecto 
+y definir box-sizing para un control más exacto del tamaño.
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Scroll */
+/* 
+Hace que el scroll entre secciones (con #enlaces) 
+sea suave y no brusco.
+*/
 html {
     scroll-behavior: smooth;
 }
 
-/* Cuerpo */
+/* ****Cuerpo de la página**** */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0f0f17;
-    color: #eee;
-    line-height: 1.7;
+    font-family: Arial, Helvetica, sans-serif; /* Fuente base */
+    background: #0f0f17; /* Color de fondo oscuro */
+    color: #eee; /* Color de texto */
+    line-height: 1.7; /* Espaciado vertical entre líneas */
 }
 
-/* Header*/
+/* ****Header (Encabezado)**** */
+
 .site-header {
-    width: 100%;
-    padding: 20px 40px;
-    background: #1a1a2e;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 20px 40px; /* Espaciado interno */
+    background: #1a1a2e; /* Fondo */
+    display: flex; /* Coloca hijos en una línea */
+    justify-content: space-between; /* Espaciado entre logo y nav */
+    align-items: center;  /* Alineación vertical */
+    position: sticky; /* Se pega arriba al hacer scroll */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Se coloca encima de otros elementos */
 }
+
+/* Contenedor para botones de música */
 .actions-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: column; /* Se apilan verticalmente */
+    gap: 8px; /* Espacio entre botones */
 }
+
+/* Estilos del logo */
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #fff;
 }
 
+/* Enlaces de navegación */
 .main-nav a {
     color: #b8b8d1;
     margin-left: 25px;
-    text-decoration: none;
+    text-decoration: none; /* Sin subrayado */
     font-size: 1rem;
-    transition: 0.2s;
+    transition: 0.2s; /* Transición suave al hacer hover */
 }
 
+/* 
+:hover = estado cuando el mouse está encima.
+Aquí cambia el color del texto.
+*/
 .main-nav a:hover {
     color: #fff;
 }
 
+/* Botones generales */
 .theme-btn {
     padding: 8px 14px;
     background: #e94560;
     border: none;
     border-radius: 6px;
     color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
+    cursor: pointer; /* Cambia cursor a mano */
+    transition: 0.2s; /* Transición para el hover */
 }
 
+/* Hover del botón (cambia color del fondo) */
 .theme-btn:hover {
     background: #c4364d;
 }
 
-/* Hero 3d */
+/* ****Modelo 3D**** */
+
 .hero {
     padding: 50px 20px;
     text-align: center;
 }
 
+/* Contenedor del visor 3D */
 .viewer {
     width: 95%;
     max-width: 900px;
@@ -82,10 +106,11 @@ body {
     background: #131324;
     border: 2px solid #2a2a45;
     border-radius: 20px;
-    overflow: hidden;
-    position: relative;
+    overflow: hidden; /* Oculta contenido que salga del borde */
+    position: relative; /* Necesario para centrar la animación de carga */
 }
 
+/* Animación de "Cargando..." */
 .loading {
     position: absolute;
     top: 50%;
@@ -102,37 +127,44 @@ body {
     color: #d3d3e0;
 }
 
+/* Paneles generales */
+
 .panel {
     padding: 70px 20px;
     max-width: 900px;
     margin: 0 auto;
 }
 
+/* Títulos principales */
 .panel h2 {
     font: 2rem;
     margin-bottom: 25px;
-    color: #e94560
+    color: #e94560;
 }
 
+/* Subtítulos */
 .panel h3 {
     padding-top: 5%;
     font: 1.8rem;
     color: #e94560;
-    
 }
-/* Sobre mi */
+
+/* ***Sobre mi*** */
+
+/* Layout para foto + texto */
 .about-content {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
+/* Imagen de perfil redonda */
 .avatar {
     width: 130px;
     height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #e94560
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Evita que se deforme */
+    border: 3px solid #e94560;
 }
 
 .about-content p {
@@ -141,45 +173,46 @@ body {
     text-align: justify;
 }
 
+/* ****Listas de habilidades y proyectos**** */
 
-/* habilidades*/
-.skill-list {
-    list-style: none;
+/* Lista base */
+.skill-list,
+.projects-list {
+    list-style: none; /* Sin viñetas */
     margin-top: 10px;
 }
 
-.skill-list li {
-    background: #1d1d32;
-    padding: 12px 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #29294a;
-    transition: 0.2s;
-}
-
-.skill-list li:hover {
-    background: #24243d;
-}
-
-/* proyectos */
+/* 
+Estilo general de los elementos de listas
+(se unificó porque lo repetías 3 veces)
+*/
+.skill-list li,
 .projects-list li {
     background: #1d1d32;
-    padding: 12px 15px;
+    padding: 15px 20px;
     border-radius: 10px;
     margin-bottom: 10px;
     border: 1px solid #29294a;
-    transition: 0.2s;
+    transition: 0.3s; /* Transición suave */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer; /* Señala que son interactivos */
 }
 
+/* Hover compartido */
+.skill-list li:hover,
 .projects-list li:hover {
     background: #24243d;
+    transform: translateX(5px);
+    border-color: #e94560;
 }
 
-/* form */
+/* ****formulario de contacto**** */
 form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 12px; /* Espacio entre inputs */
 }
 
 input,
@@ -191,6 +224,7 @@ textarea {
     color: #fff;
 }
 
+/* Botón del formulario */
 button[type="submit"] {
     padding: 12px;
     background: #e94560;
@@ -201,11 +235,12 @@ button[type="submit"] {
     transition: 0.2s;
 }
 
+/* Hover del botón */
 button[type="submit"]:hover {
     background: #c4364d;
 }
 
-/* footer */
+/* ***footer (pie)*** */
 .site-footer {
     text-align: center;
     padding: 25px;
@@ -214,23 +249,8 @@ button[type="submit"]:hover {
     margin-top: 50px;
 }
 
-/* volver arriba */
-#back-to-top {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    padding: 10px 14px;
-    background: #e94560;
+/* Íconos blancos para contacto */
+.fa-comments,
+.msg {
     color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    cursor: pointer;
-    display: none;
-    transition: 0.2s;
 }
-
-#back-to-top:hover {
-    background: #c4364d;
-}
-

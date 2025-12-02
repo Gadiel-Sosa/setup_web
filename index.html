@@ -4,58 +4,72 @@
 <head>
     <!-- META etiquetas -->
     <meta charset="UTF-8" />
+
+    <!-- Permite que el sitio sea adaptable a pantallas móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Título de la pestaña del navegador -->
     <title>Mi Portafolio 3D</title>
 
-    <!-- Vincular CSS -->
+    <!-- Archivo de estilos CSS principal -->
     <link rel="stylesheet" href="styles.css">
-</head>
+
+    <!-- Iconos de FontAwesome para usar íconos gráficos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" </head>
 
 <body>
-
+    <!-- ENCABEZADO DEL SITIO -->
     <header class="site-header">
-        <h1 class="logo">Setup 3D</h1>
-
+        <!-- Título con icono -->
+        <h1 class="logo">
+            <i class="fas fa-cube"></i> Mi setup 3D
+        </h1>
+        <!-- Barra de navegación con enlaces internos -->
         <nav class="main-nav">
-            <a href="#about">Sobre Mí</a>
-            <a href="#skills">Habilidades</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+            <a href="#about"><i class="fas fa-user"></i> Sobre Mí</a>
+            <a href="#skills"><i class="fas fa-code"></i> Habilidades</a>
+            <a href="#projects"><i class="fas fa-project-diagram"></i> Proyectos</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contacto</a>
         </nav>
+
         <div class="actions-buttons">
+            <!-- Botones para activar y desactivar la música -->
             <button onclick="document.getElementById('bg-music').muted = false;" class="theme-btn">
-                Activar música
+                <i class="fas fa-volume-up"></i> Activar música
             </button>
             <button onclick="document.getElementById('bg-music').muted = true;" class="theme-btn">
-                Desactivar música
+                <i class="fas fa-volume-down"></i> Desactivar música
             </button>
         </div>
     </header>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-
+        <!-- SECCIÓN DEL MODELO 3D -->
         <section id="hero" class="hero">
+            <!-- Contenedor donde se renderiza el modelo 3D con Three.js -->
             <div id="viewer" class="viewer">
                 <div class="loading">Cargando...</div>
             </div>
-
+            <!-- Texto descriptivo del proyecto -->
             <p class="hero-text">
                 Bienvenido a mi portafolio. Este modelo 3D fue creado en Blender
                 e integrado a la web con Three.js como parte del curso de Graficación.
             </p>
-            <button onclick="recenterCamera()" class="theme-btn">Recentrar vista</button>
-            
-
+            <!-- Texto descriptivo del proyecto -->
+            <button onclick="recenterCamera()" class="theme-btn">
+                <i class="fas fa-crosshairs"></i> Recentrar vista
+            </button>
 
         </section>
-
+        <!-- SECCIÓN SOBRE MÍ -->
         <section id="about" class="panel">
             <h2>Sobre Mí</h2>
 
             <div class="about-content">
+                <!-- Imagen de perfil -->
                 <img src="assets/img/Foto.jpg" alt="Gadiel Sosa" class="avatar">
-
+                <!-- Texto descriptivo personal -->
                 <p>
                     Hola, soy <strong>Gadiel Sosa</strong>, estudiante del ITM en Ingeniería en Sistemas
                     Computacionales. Me gusta la programación, especialmente el desarrollo móvil con Flutter y el
@@ -75,6 +89,7 @@
             <p>
                 Algunas cosas que disfruto en mi día a día:
             </p>
+            <!-- Listas con información adicional -->
             <ul class="skill-list">
                 <li>Ver anime </li>
                 <li>Jugar videojuegos</li>
@@ -91,14 +106,17 @@
             </ul>
         </section>
 
+        <!-- SECCIÓN DE HABILIDADES -->
         <section id="skills" class="panel">
             <h2>Habilidades</h2>
+            <!-- Lista de habilidades principales -->
             <ul class="skill-list">
                 <li>Python & Java</li>
                 <li>Blender 3D</li>
                 <li>Flutter & Dart</li>
                 <li>PostgreSQL</li>
             </ul>
+            <!-- Descripciones adicionales -->
             <h3>Mi experiencia</h3>
             <p>
                 A lo largo de la carrera he trabajado con Python para tareas prácticas y simulaciones;
@@ -124,15 +142,17 @@
             </p>
         </section>
 
+        <!-- SECCIÓN DE PROYECTOS -->
         <section id="projects" class="panel">
             <h2>Proyectos</h2>
-
+            <!-- Lista de proyectos --> 
             <ul class="projects-list">
                 <li>Setup 3D modelado en Blender</li>
                 <li>Aplicaciones móviles con Flutter</li>
                 <li>Automatizaciones en Python</li>
                 <li>Administración de servidores Windows y Linux</li>
             </ul>
+            <!-- Descripciones de proyectos -->
             <h3>Setup 3D hecho en Blender</h3>
             <p>
                 Modelé un escritorio de programador desde cero usando Blender, incluyendo el escritorio, monitor,
@@ -155,78 +175,90 @@
             </p>
         </section>
 
+        <!-- SECCIÓN DE CONTACTO -->
         <section id="contact" class="panel">
-            <h2>¿Quieres hablar conmigo?</h2>
+            <h2><i class="fas fa-comments"></i> ¿Quieres hablar conmigo?</h2>
 
             <p>
                 Si te interesa mi trabajo o quieres colaborar en algún proyecto, puedes escribirme. Me gusta aprender,
                 compartir ideas y trabajar en cosas nuevas que me ayuden a mejorar como desarrollador.
             </p>
-
+            <!-- Información de contacto -->
             <p>
-                Correo:
+                <i class="fas fa-envelope"></i> Correo:
                 <a href="mailto:LE23081226@merida.tecnm.mx" target="_blank">
                     LE23081226@merida.tecnm.mx
                 </a>
             </p>
 
             <p>
-                GitHub:
+                <i class="fab fa-github"></i>
                 <a href="https://github.com/Gadiel-Sosa" target="_blank">
                     github.com/Gadiel-Sosa
                 </a>
             </p>
-        </section>
 
+            <p>
+                <i class="fab fa-linkedin"></i> Linkedin:
+                <a href="https://www.linkedin.com/in/gadiel-antonio-sosa-chan-27a428398/" target="_blank">
+                    Linkedin.com/gadiel-sosa
+                </a>
+            </p>
+
+            <p>
+                <i class="fas fa-language"></i> Duolingo:
+                <a href="https://es.duolingo.com/profile/AntonioSosa713" target="_blank">
+                    duolingo.com/gadiel-sosa
+                </a>
+            </p>
+        </section>
+        <!-- FORMULARIO DE MENSAJE -->
         <section id="contact-form" class="panel">
-            <h2>Envíame un mensaje</h2>
+            <h2><i class="fas fa-envelope msg"></i> Envíame un mensaje</h2>
             <p>
                 Si deseas enviarme un mensaje directo, llena este formulario. Siempre estoy abierto a recibir
                 comentarios,
                 sugerencias o ideas de proyectos.
             </p>
+            
             <form>
+                <!-- Campo de nombre -->
                 <label>Nombre:</label>
                 <input type="text" name="nombre" required>
 
                 <label>Correo:</label>
+                <!-- Campo de correo -->
                 <input type="email" name="correo" required>
-
+                <!-- Campo de mensaje -->
                 <label>Mensaje:</label>
                 <textarea name="mensaje" rows="5" required></textarea>
-
+                <!-- Botón de envío -->
                 <button type="submit">Enviar</button>
             </form>
         </section>
 
     </main>
 
+    <!-- PIE DE PÁGINA -->
     <footer class="site-footer">
-        <p>© 2025 Gadiel Sosa — Portafolio 3D</p>
+        <p>
+            <i class="fas fa-copyright"></i> 2025 Gadiel Sosa --
+            <i class="fas fa-cube"></i> Portafolio 3D
+        </p>
     </footer>
-
-    <button id="back-to-top">↑ Volver arriba</button>
-
-
-
+    <!-- AUDIO DE FONDO (MUTED POR DEFECTO) -->
     <audio id="bg-music" src="assets\audio\Imagine Dragons - Demons instrumental - Shadi004.mp3" loop autoplay
         muted></audio>
-    
-
-
+    <!-- Librería principal de Three.js -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.128/build/three.min.js"></script>
 
-<!-- Loaders clásicos (NO jsm) -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+    <!-- Cargador GLTF para modelos 3D -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+    <!-- Controles de cámara (rotar/zoom) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
 
-<!-- Tu script -->
-<script src="script.js"></script>
-
-
+    <!-- Tu script del modelo -->
+    <script src="script.js"></script>
 
 </body>
-
-
-
 </html>
