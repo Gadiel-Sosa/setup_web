@@ -1,7 +1,7 @@
 # 🖥️ 3D Developer Portfolio — Blender + Three.js
 
 This project is an **interactive 3D web portfolio** showcasing a developer setup modeled entirely in **Blender** and rendered in real time using **Three.js**.  
-It combines front-end development, 3D modeling, animation, and creative interaction — all inside the browser.
+It combines 3D modeling, animation, and creative interaction — all inside the browser.
 
 ---
 
@@ -23,11 +23,11 @@ This web app loads a **3D room/desk setup** created from scratch in Blender, inc
 - Soft lighting + RGB ambient animation  
 - Smooth intro animation when the model appears  
 - Interactive camera movement with OrbitControls  
-- Optional background music toggle  
+- Background music  
 
 The goal was to bring together **creative design + code**, demonstrating full control of:  
 ✔ 3D asset creation  
-✔ Web animation  
+✔ Web   
 ✔ Scene lighting  
 ✔ Real-time rendering  
 ✔ JavaScript logic  
@@ -65,7 +65,7 @@ The project was coded with:
 
 - **VS Code** for JavaScript + HTML + CSS  
 - **Live Server** for local testing  
-- **Three.js** (loaded via CDN)  
+- **Three.js**   
 - **OrbitControls and GLTFLoader modules**
 
 Blender → GLB export → Imported into VS Code → Rendered with Three.js.
