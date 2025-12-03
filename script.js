@@ -381,6 +381,24 @@ function recenterCamera() {
     controls.target.copy(center);
     controls.update();
 }
+const modeBtn = document.getElementById("b-mode");
+
+    // Cargar modo guardado
+    if (localStorage.getItem("light-mode") === "true") {
+        document.body.classList.add("light-mode");
+        modeBtn.textContent = "Modo oscuro";
+    }
+
+    // Cambiar modo
+    modeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        const isLight = document.body.classList.contains("light-mode");
+        localStorage.setItem("light-mode", isLight);
+
+        modeBtn.textContent = isLight ? "Modo oscuro" : "Modo claro";
+    });
+
 
 
 /* ****Iniciar todo cuando la página haya cargado completamente**** */

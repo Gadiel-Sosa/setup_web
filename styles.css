@@ -75,7 +75,7 @@ Aquí cambia el color del texto.
 }
 
 /* Botones generales */
-.theme-btn {
+.theme-btn, .claro {
     padding: 8px 14px;
     background: #e94560;
     border: none;
@@ -253,4 +253,98 @@ button[type="submit"]:hover {
 .fa-comments,
 .msg {
     color: white;
+}
+
+
+body.light-mode {
+    background: #f2f2f7;
+    color: #1a1a1a;
+}
+
+/* Header */
+body.light-mode .site-header {
+    background: #ffffff;
+}
+
+body.light-mode .logo {
+    color: #1a1a1a;
+}
+
+body.light-mode .main-nav a {
+    color: #333;
+}
+
+body.light-mode .main-nav a:hover {
+    color: #e94560;
+}
+
+/* Botones */
+body.light-mode .theme-btn,
+body.light-mode button {
+    background: #e94560;
+    color: #fff;
+}
+
+/* Viewer */
+body.light-mode .viewer {
+    background: #e5e5f0;
+    border: 2px solid #c7c7dd;
+}
+
+body.light-mode .hero-text {
+    color: #333;
+}
+
+/* Paneles */
+body.light-mode .panel h2,
+body.light-mode .panel h3 {
+    color: #e94560;
+}
+
+body.light-mode .panel {
+    color: #1a1a1a;
+}
+
+/* Sobre mí */
+body.light-mode .about-content p {
+    color: #333;
+}
+
+/* Listas */
+body.light-mode .skill-list li,
+body.light-mode .projects-list li {
+    background: #ffffff;
+    border: 1px solid #d0d0e0;
+    color: #1a1a1a;
+}
+
+body.light-mode .skill-list li:hover,
+body.light-mode .projects-list li:hover {
+    background: #f2f2f7;
+    border-color: #e94560;
+}
+
+/* Formularios */
+body.light-mode input,
+body.light-mode textarea {
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #bbb;
+}
+
+body.light-mode button[type="submit"] {
+    background: #e94560;
+    color: #fff;
+}
+
+/* Footer */
+body.light-mode .site-footer {
+    background: #ffffff;
+    color: #333;
+}
+
+/* Iconos */
+body.light-mode .fa-comments,
+body.light-mode .msg {
+    color: #000;
 }
