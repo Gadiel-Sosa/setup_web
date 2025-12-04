@@ -115,7 +115,7 @@ Aquí cambia el color del texto.
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Mover los elementos en los ejes */
     font-size: 1.2rem;
     color: #aaa;
 }
@@ -153,7 +153,7 @@ Aquí cambia el color del texto.
 
 /* Layout para foto + texto */
 .about-content {
-    display: flex;
+    display: flex; /* Se adapte a la web */
     gap: 20px;
     align-items: center;
 }
